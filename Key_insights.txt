@@ -1,0 +1,10 @@
+1. The column 'pickup_census_tract' has around 99% missing values.
+2. The column 'dropoff_census_tract' has more than 40% missing values
+3. These column are almost correlated and can fill them efficiently so dropping them would be a good choice.
+4. The column 'company' has more than 50% missing values and the filled one have too many unique values which may be difficult to handle and also would not be that benifical for the prediction so dropping that column would be better.
+5. Two columns named 'dropoff_latitude' and 'dropoff_longitude' would around 500 missing values, we can feel them the mode/mean/median but this would not be a good choice because these are location point and filling them based on our assumption would be the model worst.So, I am going to drop all rows which have non values in these columns.
+6. The column named 'payment_type' have misleading unique values like 'No charge', 'Unknown', 'Dispute' etc so going to put all of them into one category named 'Other'.
+7. The column name 'pickup_community_area' and 'dropoff_community_area' are looking like numerical column but they are more likely to be categorical columns.
+8. The column name 'dropoff_community_area' has some missing values so instead of using mode, I train a decision tree and then fill the values. Interestingly all the predicated values are same which is '76'.
+9. Don't know why but the mean value of 4 is too high even though the count is less.
+10.  
